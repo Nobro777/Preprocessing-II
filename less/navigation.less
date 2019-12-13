@@ -4,7 +4,14 @@ nav {
     justify-content: space-evenly;
     width: 100%;
     max-width: 100%;
-    border-bottom: 2px dashed lightgrey;
+        @media @mobile {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            right: 7rem;
+            top: 3rem;
+            margin-bottom: 2%;
+        }
         a {
             color: black;
             max-width: 100%;
@@ -12,13 +19,24 @@ nav {
             position: relative;
             left: 7rem;
             bottom: 3rem;
-}
+        }
+    }
+#line {
+    width: 100%;
+    border-bottom: 2px dashed @navigation-border;
+    border-top: none;
+    opacity: .5;
+    margin-bottom: 0%;
 }
 .logo {
     margin-left: 5%;
     margin-top: 5%;
     display: flex;
     justify-content: flex-start;
+        @media @mobile {
+            display: flex;
+            justify-content: center;
+        }        
 }
 .navhome {
 

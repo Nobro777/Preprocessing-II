@@ -3,32 +3,55 @@ width: 100%;
 max-width: 100%;
 padding-left: 5%;
 padding-right: 5%;
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .content-section {
     margin: 3rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 0 2% 0;
+    }
   } 
     .text-content {
       width: 48%;
       padding-right: 1%;
       max-width: 100%;
+        @media @mobile {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+        @media @mobile {
+          width: 100%;
+        }
 
       img {
         border-radius: 10px;
       }
     }
   }
-
   .inverse-content {
     padding-bottom: 3rem;
     border-bottom: 2px dashed @navigation-border;
+      @media @mobile {
+        display: flex;
+        flex-direction: column-reverse;
+      }
 
     .text-content {
       padding-left: 1%;
@@ -44,25 +67,40 @@ padding-right: 5%;
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+      @media @mobile {
+        width: 100%;
+        margin: 5% 0 5% 0;
+      }
 
     img {
       border-radius: 10px;
     }
   }
-
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    // border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+      @media @mobile {
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0% 0 0 10%;
+        padding: 5% 0 0 0;
+      }
 
     .destination {
-      width: 30%;
+      width: 100%;
       margin-bottom: 30px;
+        @media @mobile {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
     }
   }
 // home
-
 .funbuspic {
   width: 100%;
 }
@@ -74,15 +112,49 @@ header {
       padding-top: 2%;
 }   
 }
+h4 {
+  @media @mobile {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+p {
+  @media @mobile {
+    display: flex;
+    justify-content: center;
+    width: 99%;
+  }
+}
 .content-section {
   border-top: 2px dashed lightgrey;
   padding-top: 3rem;
+    @media @mobile {
+      border-top: none;
+    }
 }
 button {
   .parametrictbuttonmixin();
+    @media @mobile {
+      margin-left:0;
+      width: 100%;
+    }
 }
-
+#reversethis {
+  @media @mobile {
+  display: flex;
+  flex-direction: column-reverse;
+  }
+}
 button:hover {
   opacity: .8;
   font-weight: bold;
+}
+.linebreak {
+  @media (min-width: 501px) {
+    display: none;
+  }
+  @media @mobile {
+    border-top: 2px dashed @navigation-border;
+    width: 100%;
+  }
 }
